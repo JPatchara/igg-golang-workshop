@@ -28,3 +28,7 @@ func newDeck() deck {
 
 	return generatedCardDeck
 }
+
+func deal(cards deck, handedSize int) (deck, deck) {
+	return cards[:handedSize], cards[handedSize:]
+}
