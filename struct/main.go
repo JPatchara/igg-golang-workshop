@@ -27,9 +27,17 @@ func main() {
 	// jin.lastname = "Chukiatkajohn"
 
 	// fmt.Println("%+v", jin)
+
+	// jinPointer := &jin
+	// jinPointer.updateFirstname("Jin")
+	jin.updateFirstname("Jin")
 	jin.printPerson()
 }
 
 func (p person) printPerson() {
 	fmt.Println("%+v", p)
+}
+
+func (p *person) updateFirstname(name string) {
+	(*p).firstname = name
 }
